@@ -1,0 +1,33 @@
+.restroMainWrapper{
+    width: 100%;
+    background-color: "#000000";
+    height: 100vh;
+ 
+   
+}
+.Search{
+    padding: 8px;
+    background-color: #ffffff;
+    display: flex
+}
+.res-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.filter-wrapper{
+    margin-left: 8px;
+}
+.filter-btn{
+    padding: 5px;
+    color: black;
+    cursor: pointer;
+}
+.filter-selected{
+    padding: 5px;
+    color: black;
+    cursor: pointer;
+    background-color:gray;
+
+}

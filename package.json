@@ -1,0 +1,37 @@
+{
+  "name": "food-delivery-app",
+  "version": "1.0.0",
+  "description": "food delivery app",
+  "main": "App.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "prodbuild": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ritz1998/Food-Delivery-App.git"
+  },
+  "keywords": [
+    "practise"
+  ],
+  "author": "Ritul Patil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ritz1998/Food-Delivery-App/issues"
+  },
+  "homepage": "https://github.com/Ritz1998/Food-Delivery-App#readme",
+  "dependencies": {
+    "primeflex": "^3.3.1",
+    "primereact": "^10.8.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "browserlist": [
+    "last 2 versions"
+  ]
+}

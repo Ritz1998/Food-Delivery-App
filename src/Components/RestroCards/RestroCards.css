@@ -1,0 +1,67 @@
+/* Card container */
+.restroCard-container {
+    width: 200px;
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-height: 320px; /* Ensure all cards have a consistent minimum height */
+    height: auto; /* Allow the height to grow as per the content */
+    flex-grow: 0; /*
+}
+
+/* Image styling */
+.restroFood-img {
+    width: 100%;
+    height: 120px; /* Keep height consistent for images */
+    border-radius: 5px;
+    object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+/* Hover effect: lifting the card and reducing background opacity */
+.restroCard-container:hover {
+    transform: translateY(-10px); /* Lifts the card */
+    background-color: rgba(245, 245, 220, 0.8); /* Slight opacity change */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Elevate the shadow on hover */
+}
+
+/* Name container with single line ellipsis */
+.restroNameContainer {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Cuisines container with multiline ellipsis */
+.cuisinesContainer {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    margin: 8px 0;
+    text-align: center;
+}
+
+/* Additional styling for ratings and other text */
+.restroCard-container > h3, h4 {
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* Prevent cards from becoming uneven */
+.restroCard-container {
+    min-height: 320px; /* Minimum height to prevent uneven cards */
+}

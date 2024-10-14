@@ -1,0 +1,57 @@
+.header {
+    width: 100%;
+    background-color: #333; /* Background color for the header */
+    padding: 10px;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content:space-between;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-left: auto; /* Push menu items to the right */
+    margin-right: 10px;
+}
+.menu .p-menubar-root-list {
+    justify-content: flex-end; /* Align menu items to the right */
+}
+
+.menu .p-menuitem {
+    margin-left: 20px;
+    color: antiquewhite !important; /* Space between menu items */
+}
+.menu .p-menuitem-link {
+    color: white !important; /* Change menu item text color to white */
+}
+.menu .p-menuitem-link:hover {
+    color: white; /* Keep hover text color white */
+    background-color: rgba(255, 255, 255, 0.1); /* Optional hover effect */
+}
+.logo-container {
+    flex-shrink: 0; /* Prevent logo from shrinking */
+    margin-right: 20px; /* Space between logo and menu */
+}
+
+.menu {
+    flex-grow: 1; /* Allow the menu to take available space */
+}
+
+/* Cart button styling */
+.cart-button {
+    background: none; /* Remove default button background */
+    border: none; /* Remove border */
+    color: white; /* Set cart icon color */
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Optional: Add hover effects */
+.pi:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
