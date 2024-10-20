@@ -6,6 +6,7 @@ import { getRestroList } from '../../Api/Apiservices'
 import RestroListSkeletonLoader from '../SkeletonLoading/RestroListSkeletonLoader'
 import { Skeleton } from 'primereact/skeleton'
 import { InputText } from "primereact/inputtext";
+import { Link } from 'react-router-dom'
 
 
 const Restaurants = () => {
@@ -71,7 +72,7 @@ const Restaurants = () => {
       </div>
       <div className="res-container">
         {searchRestro?.map((item: any) => {
-          return <RestroCards resData={item} />
+          return <Link to = {"/restaurants/"+ item?.info?.id} > <RestroCards resData={item} /> </Link>
         })}
       </div>
 

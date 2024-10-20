@@ -1,0 +1,67 @@
+.menuItem-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Container for the whole restaurant menu page */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Styling for the restaurant info section */
+  .restaurant-info {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .restaurant-info h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .restaurant-info h3 {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 8px;
+  }
+  
+  /* Wrapper for menu items */
+  .menuItem-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  /* Menu header styling */
+  h1.menu-header {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    color: #333;
+    width: 70%;
+    padding: 16;
+  }
+  
+  /* Adjustments for mobile responsiveness */
+  @media (max-width: 768px) {
+    .restaurant-info h1 {
+      font-size: 28px;
+    }
+  
+    .restaurant-info h3 {
+      font-size: 16px;
+    }
+  
+    .menuItem-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
