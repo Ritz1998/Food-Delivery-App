@@ -6,7 +6,7 @@ import { getRestroList } from '../../Api/Apiservices'
 import RestroListSkeletonLoader from '../SkeletonLoading/RestroListSkeletonLoader'
 import { Skeleton } from 'primereact/skeleton'
 import { InputText } from "primereact/inputtext";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const Restaurants = () => {
@@ -14,6 +14,7 @@ const Restaurants = () => {
   const [searchRestro, setSearchRestro] = useState([])
   const [isFilterSelected, setIsFilterSelected] = useState(false)
   const [searchTxt, setSearchTxt] = useState('');
+  const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -62,17 +63,23 @@ const Restaurants = () => {
     <div className='container restroMainWrapper'>
       {/* {restro?.length == 0 ? <RestroListSke
       letonLoader /> : null} */}
-      <div className="card flex justify-content-center">
-        <InputText value={searchTxt} onChange={(e) => search(e.target.value)} />
-      </div>
       <div className='filter-wrapper'>
+      <div className="card flex justify-content-center">
+        <InputText value={searchTxt} onChange={(e) => search(e.target.value)} className='' />
+      </div>
         <button className={isFilterSelected ? "filter-selected" : 'filter-btn'} onClick={onFilterApplied}>
           Top Rated Restaurant
         </button>
       </div>
       <div className="res-container">
         {searchRestro?.map((item: any) => {
-          return <Link to = {"/restaurants/"+ item?.info?.id} > <RestroCards resData={item} /> </Link>
+          return <div 
+           key={item?.info?.id}
+           onClick={() => navigate(`/restaurants/${item?.info?.id}`)} 
+           style={{ cursor: 'pointer' }} // optional to make it look like a clickable item
+         >
+           <RestroCards resData={item} />
+        </div>
         })}
       </div>
 

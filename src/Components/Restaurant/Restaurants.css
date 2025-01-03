@@ -17,7 +17,10 @@
     flex-wrap: wrap;
 }
 .filter-wrapper{
+    display: flex;
     margin-left: 8px;
+    align-items: center;
+    gap: 10px;
 }
 .filter-btn{
     padding: 5px;
